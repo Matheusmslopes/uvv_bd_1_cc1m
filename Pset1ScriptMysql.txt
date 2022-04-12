@@ -1,9 +1,10 @@
 CREATE user Matheus identified by "Matheus";
-GRANT all privileges on uvv to Matheus;
 
 CREATE database uvv;
 
 USE uvv;
+
+GRANT all privileges on uvv to Matheus;
 
 CREATE TABLE funcionario (
                 cpf CHAR(11) NOT NULL,
