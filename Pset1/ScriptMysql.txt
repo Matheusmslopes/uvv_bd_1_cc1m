@@ -6,7 +6,6 @@ USE uvv;
 
 GRANT all privileges on uvv to Matheus;
 
-
 CREATE TABLE funcionario (
                 cpf CHAR(11) NOT NULL,
                 primeiro_nome VARCHAR(15) NOT NULL,
