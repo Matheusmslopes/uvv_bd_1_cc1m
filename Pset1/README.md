@@ -10,7 +10,7 @@
 
 Serão utilizados alguns sistemas de gerenciamneto de banco de dados **(SGBD)**, como o **PostgreSQL** e o **MySQL/MariaDB**.
 
-Para acessar esses SGBD, foram disponibilizados algumas ferramentas, tais como:
+Para realizar este trabalho, foram disponibilizados algumas ferramentas, tais como:
 
 * SQL Power Architect;
 * Oracle VM VirtualBox;
