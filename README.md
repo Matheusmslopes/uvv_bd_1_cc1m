@@ -1,1 +1,3 @@
-# uvv_bd_1_cc1m
+# Banco de Dados
+
+Este é um repositório criado para **Design e Desenvolvimento de Banco de Dados** propostos pelo professor Abrantes 
