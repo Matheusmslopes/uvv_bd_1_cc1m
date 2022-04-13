@@ -19,7 +19,8 @@ CREATE DATABASE uvv
     CONNECTION LIMIT = -1;
 
 CREATE SCHEMA elmasri 
-authorization Matheus
+authorization "Matheus";
+
 ALTER USER "Matheus"
 SET SEARCH_PATH TO elmasri, "\user", public;
 
