@@ -1,10 +1,13 @@
 CREATE user Matheus identified by "Matheus";
 
+GRANT all privileges on uvv.* to Matheus;
+
+SYSTEM mysql -u Matheus -p
+Matheus
+
 CREATE database uvv;
 
 USE uvv;
-
-GRANT all privileges on uvv to Matheus;
 
 CREATE TABLE funcionario (
                 cpf CHAR(11) NOT NULL,
@@ -316,7 +319,7 @@ INSERT INTO trabalha_em( cpf_funcionario, numero_projeto, horas)
 VALUES( '98765432168', 20, '15.0');
 
 INSERT INTO trabalha_em( cpf_funcionario, numero_projeto, horas)
-VALUES( '88866555576', 20, '0')
+VALUES( '88866555576', 20, '0');
 
 
 
