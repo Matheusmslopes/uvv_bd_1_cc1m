@@ -16,17 +16,19 @@ Para realizar este trabalho, foram disponibilizados algumas ferramentas, tais co
 * Oracle VM VirtualBox;
 * DBeaver.
 
-### SQL Power Architect
-
-No SQL Power Architect comecei fazendo o projeto lógico do Pset. Depois de pronto, eu posso extrair os scripts do MariaDB/MySQL e PostgreSQL.
-
 ### Oracle VM VirtualBox
 
 É a principal ferramenta disponibilizada, uma vez que ela já vem configurada com alguns dos principais SGBD do mundo e com o SQL Power Architect.
 
+### SQL Power Architect
+
+No SQL Power Architect comecei fazendo o projeto lógico do Pset. Depois de pronto, eu posso extrair os scripts do MariaDB/MySQL e PostgreSQL.
+
+>**OBS:**  foi necessário alterar a precisão do campo `funcionario.endereco` de *varchar(30)* para *varchar(50)* para que os dados fossem corretamente preenchidos. Já que alguns enderecos estavam passando de 30 caracteres.
+
 ### DBeaver
 
-É o local em que usamos os SGBD do **PostgreSQL** e do **MariaDB**.
+É o local em que usamos os SGBD do **PostgreSQL** e do **MariaDB**. Também será o local em que vou usar os scripts salvos do power architect.
 
 
 
