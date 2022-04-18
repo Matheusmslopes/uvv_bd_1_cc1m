@@ -60,6 +60,8 @@ COMMENT ON COLUMN elmasri.funcionario.salario IS 'Salário do funcionário.';
 COMMENT ON COLUMN elmasri.funcionario.cpf_supervisor IS 'CPF do supervisor.  É a FK para a própria tabela.';
 COMMENT ON COLUMN elmasri.funcionario.numero_departamento IS 'Número do departamento do funcionário.  É a FK de departamento';
 
+/*Aqui tive que altera o funcionario.endereco, já que no projeto original é VARCHAR(30), mas alguns enderecos ultrapassam esse limite.*/
+
 
 
 CREATE TABLE elmasri.dependente (
