@@ -196,6 +196,10 @@ NOT DEFERRABLE;
 INSERT INTO elmasri.funcionario(primeiro_nome, nome_meio, ultimo_nome, cpf, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento ) 
 VALUES ('Jorge', 'E', 'Brito', '88866555576', '1937-11-10','Rua do Horto, 35, São Paulo, SP', 'M', '55000', '88866555576', 1 );
 
+/*Diferentemente do dado funcionario.cpf_supervisor do modelo do Elmasri,  aqui eu não consegui inserir um dado nulo.
+ * Para resolver esta situação, percebi que ele é o "supervisor dos supervisores", logo  tive a ideia de colocar o seu próprio cpf neste campo.*/
+
+/*Com o "Jorge" cadastrado, agora é possível cadastrar os supervisores e depois os outros funcionários*/
 
 INSERT INTO elmasri.funcionario(primeiro_nome, nome_meio, ultimo_nome, cpf, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento ) 
 VALUES ('Jennifer', 'S', 'Souza', '98765432168', '1941-06-20','Av.Arthur de Lima, 54, Santo André, SP', 'F', '43000', '88866555576', 4 );
@@ -218,6 +222,8 @@ VALUES ('Ronaldo', 'K', 'Lima', '66688444476', '1962-09-15','Rua Rebouças, 65, 
 INSERT INTO elmasri.funcionario(primeiro_nome, nome_meio, ultimo_nome, cpf, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento ) 
 VALUES ('Joice', 'A', 'Leite', '45345345376', '1972-07-31','Av. Lucas Obes, 74, São Paulo, SP', 'F', '25000', '33344555587', 5 );
 
+/*Com os funcionários devidamente cadastrados, agora será possível direcioná-los para os seus departamentos*/
+
 INSERT INTO elmasri.departamento( nome_departamento, numero_departamento, cpf_gerente, data_inicio_gerente)
 VALUES( 'Matriz', 1, '88866555576', '1981-06-19');
 
@@ -226,6 +232,8 @@ VALUES( 'Pesquisa', 5, '33344555587', '1988-05-22');
 
 INSERT INTO elmasri.departamento( nome_departamento, numero_departamento, cpf_gerente, data_inicio_gerente)
 VALUES( 'Administração', 4, '98765432168', ' 1995-01-01');
+
+/*Com os dados da tabela departamento inseridos, cadastraremos as localizações*/
 
 INSERT INTO elmasri.localizacoes_departamento( numero_departamento, local)
 VALUES( 1, ' São Paulo');
@@ -241,6 +249,8 @@ VALUES( 1, ' Itu');
 
 INSERT INTO elmasri.localizacoes_departamento( numero_departamento, local)
 VALUES( 5, ' São Paulo');
+
+/* A partir dos dados das tabelas departamento e localizacoes_departamento inseridos, é possível cadastrar os dados da tabela projeto*/
 
 INSERT INTO elmasri.projeto( nome_projeto, numero_projeto, local_projeto, numero_departamento)
 VALUES( 'ProdutoX', 1, 'Santo André', 5);
@@ -259,6 +269,8 @@ VALUES( 'Reorganização', 20, 'São Paulo', 1);
 
 INSERT INTO elmasri.projeto( nome_projeto, numero_projeto, local_projeto, numero_departamento)
 VALUES( 'Novosbenefícios', 30, 'Mauá', 4);
+
+/*A partir dos dados da tabela funcionario inseridos, já é possível cadastrar os dados de dependente*/
 
 INSERT INTO elmasri.dependente( cpf_funcionario, nome_dependente, sexo, data_nascimento, parentesco)
 VALUES( '33344555587', 'Alícia', 'F', '1986-04-05', 'Filha');
@@ -280,6 +292,8 @@ VALUES( '12345678966', 'Alícia', 'F', '1988-12-30', 'Filha');
 
 INSERT INTO elmasri.dependente( cpf_funcionario, nome_dependente, sexo, data_nascimento, parentesco)
 VALUES( '12345678966', 'Elizabeth', 'F', '1967-05-05', 'Esposa');
+
+/*Por último, inseri os dados da tabela trablha_em.*/
 
 INSERT INTO elmasri.trabalha_em( cpf_funcionario, numero_projeto, horas)
 VALUES( '12345678966', 1, '32.5');
@@ -328,6 +342,9 @@ VALUES( '98765432168', 20, '15.0');
 
 INSERT INTO elmasri.trabalha_em( cpf_funcionario, numero_projeto, horas)
 VALUES( '88866555576', 20, '0');
+
+/*Aqui foi feita uma adpatação em "trabalha_em.horas" do último funcionário, que é o "Jorge".
+No Elmasri temos a condição NULL, mas como a restrição é NOT NULL, tive a ideia de inserir 0.*/
 
 
 
