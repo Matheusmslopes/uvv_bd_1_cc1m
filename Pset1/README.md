@@ -18,7 +18,7 @@ Para realizar este trabalho, foram disponibilizados algumas ferramentas, tais co
 
 ### SQL Power Architect
 
-No SQL Power Architect foi feito o projeto lógico do pset1.
+No SQL Power Architect comecei fazendo o projeto lógico do Pset. Depois de pronto, eu posso extrair os scripts do MariaDB/MySQL e PostgreSQL.
 
 ### Oracle VM VirtualBox
 
