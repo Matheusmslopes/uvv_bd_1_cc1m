@@ -18,7 +18,7 @@ CREATE TABLE funcionario (
                 endereco VARCHAR(50),
                 sexo CHAR(1),
                 salario DECIMAL(10,2),
-                cpf_supervisor CHAR(11) NOT NULL,
+                cpf_supervisor CHAR(11),
                 numero_departamento INT NOT NULL,
                 PRIMARY KEY (cpf)
 );
@@ -117,7 +117,7 @@ CREATE UNIQUE INDEX projeto_idx
 CREATE TABLE trabalha_em (
                 cpf_funcionario CHAR(11) NOT NULL,
                 numero_projeto INT NOT NULL,
-                horas DECIMAL(3,1) NOT NULL,
+                horas DECIMAL(3,1),
                 PRIMARY KEY (cpf_funcionario, numero_projeto)
 );
 
@@ -186,7 +186,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION;
 
 INSERT INTO funcionario(primeiro_nome, nome_meio, ultimo_nome, cpf, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento ) 
-VALUES ('Jorge', 'E', 'Brito', '88866555576', '1937-11-10','Rua do Horto, 35, São Paulo, SP', 'M', '55000', '88866555576', 1 );
+VALUES ('Jorge', 'E', 'Brito', '88866555576', '1937-11-10','Rua do Horto, 35, São Paulo, SP', 'M', '55000', NULL, 1 );
 
 
 INSERT INTO funcionario(primeiro_nome, nome_meio, ultimo_nome, cpf, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento ) 
@@ -319,7 +319,7 @@ INSERT INTO trabalha_em( cpf_funcionario, numero_projeto, horas)
 VALUES( '98765432168', 20, '15.0');
 
 INSERT INTO trabalha_em( cpf_funcionario, numero_projeto, horas)
-VALUES( '88866555576', 20, '0');
+VALUES( '88866555576', 20, NULL);
 
 
 
