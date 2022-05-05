@@ -1,7 +1,7 @@
 SELECT CONCAT(primeiro_nome," ",nome_meio," ",ultimo_nome) "Nome completo",
 CONCAT(d.nome_departamento,",n°", d.numero_departamento) "Departamento",
 (CASE
-WHEN f.sexo = 'M'THEN "Masculino"
+WHEN f.sexo = 'M' THEN "Masculino"
 ELSE "Feminino"
 END) "sexo do funcionario",
 nome_dependente,
