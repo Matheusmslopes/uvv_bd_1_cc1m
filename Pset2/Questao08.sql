@@ -1,5 +1,5 @@
-SELECT CONCAT(d.nome_departamento,",n°", d.numero_departamento) "Departamento",
-CONCAT(primeiro_nome," ",nome_meio," ",ultimo_nome) "Nome completo",
+SELECT CONCAT(primeiro_nome," ",nome_meio," ",ultimo_nome) "Nome completo",
+CONCAT(d.nome_departamento,",n°", d.numero_departamento) "Departamento",
 p.nome_projeto "projeto",
 t.horas
 FROM funcionario f
