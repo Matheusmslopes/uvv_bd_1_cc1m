@@ -1,4 +1,5 @@
-SELECT round(avg(salario),2) "Média salarial", d.numero_departamento
+SELECT round(avg(salario),2) "Média salarial", 
+d.numero_departamento "Número do departamento"
 FROM funcionario f
 INNER JOIN departamento d
 ON f.numero_departamento = d.numero_departamento
