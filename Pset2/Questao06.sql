@@ -16,4 +16,4 @@ ON f.cpf = dp.cpf_funcionario
 INNER JOIN departamento d
 ON f.numero_departamento = d.numero_departamento
 ORDER BY f.numero_departamento, 
-primeiro_nome;
+f.primeiro_nome;
