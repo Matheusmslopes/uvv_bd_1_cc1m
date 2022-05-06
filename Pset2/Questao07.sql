@@ -1,6 +1,6 @@
 SELECT CONCAT(primeiro_nome," ",nome_meio," ",ultimo_nome) "Nome completo",
 CONCAT(d.nome_departamento,",n°", d.numero_departamento) "Departamento",
-salario
+salario "Salário"
 FROM funcionario f
 INNER JOIN departamento d
 ON f.numero_departamento = d.numero_departamento
