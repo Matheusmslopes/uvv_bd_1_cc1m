@@ -10,3 +10,5 @@ A pasta `pset?`, com o número na frente sendo qual Pset é retratado, é o loca
 **Exemplo**
 
 Pset1 -> este é o diretório do Problem Set 1.
+
+E assim por diante.
