@@ -1,5 +1,5 @@
 SELECT CONCAT(d.nome_departamento,",n°", d.numero_departamento) "Departamento",
-p.nome_projeto,
+p.nome_projeto "Nome do projeto",
 SUM(t.horas) "Horas trabalhadas"
 FROM trabalha_em t
 INNER JOIN projeto p 
