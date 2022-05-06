@@ -1,5 +1,5 @@
 SELECT CONCAT(primeiro_nome," ",nome_meio," ",ultimo_nome) "Nome completo",
-TIMESTAMPDIFF(year, data_nascimento,CURDATE()) "idade",
+TIMESTAMPDIFF(year, data_nascimento,CURDATE()) "Idade",
 salario "Salário atual",
 CASE
 WHEN salario <35000 THEN salario*1.2
