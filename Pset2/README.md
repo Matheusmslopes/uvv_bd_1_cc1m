@@ -9,7 +9,7 @@
 
 Neste **PSet2**, aprendemos a manipular os comandos *MySQL*, para conseguir extrair relatórios do script feito no **PSet1**.
 
-ALguns novos comandos que aprendi realizando este Pset:
+Alguns novos comandos que aprendi realizando este Pset:
 
 CONCAT(<coluna_1>, <coluna_2>, ...);
 
@@ -19,7 +19,7 @@ ON ...;
 CASE <br>
   WHEN condição1 THEN resultado1 <br>
   WHEN condição2 THEN resultado2 <br>
-  ELSE result <br>
+  ELSE resultado3 <br>
 END;
  
  
