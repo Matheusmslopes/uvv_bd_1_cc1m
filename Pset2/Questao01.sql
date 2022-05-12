@@ -1,5 +1,3 @@
-USE UVV;
-
 SELECT round(avg(salario),2) "Média salarial", 
 d.numero_departamento "Número do departamento"
 FROM funcionario f
