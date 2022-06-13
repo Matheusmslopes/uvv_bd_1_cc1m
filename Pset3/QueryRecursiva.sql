@@ -8,7 +8,8 @@ CAST(nome AS TEXT) AS niv_relacao
 FROM classificacao
 WHERE codigo_pai IS NULL 
 UNION ALL
-SELECT c.codigo,
+SELECT 
+c.codigo,
 tp.nome,
 c.codigo_pai,
 tp.nivel + 1 AS nivel,
